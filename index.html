@@ -3,28 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calculator</title>
+<title>Math Game</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="calc">
-  <div class="display" id="display">0</div>
-  <div class="keys">
-    <button data-a="clear" class="fn">AC</button>
-    <button data-a="back" class="fn">⌫</button>
-    <button data-v="%" class="op">%</button>
-    <button data-v="/" class="op">÷</button>
-    <button data-v="7">7</button><button data-v="8">8</button><button data-v="9">9</button>
-    <button data-v="*" class="op">×</button>
-    <button data-v="4">4</button><button data-v="5">5</button><button data-v="6">6</button>
-    <button data-v="-" class="op">−</button>
-    <button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button>
-    <button data-v="+" class="op">+</button>
-    <button data-v="0" class="zero">0</button>
-    <button data-v=".">.</button>
-    <button data-a="eq" class="eq">=</button>
-  </div>
-</main>
+<div class="layout">
+  <section class="game" id="game">
+    <div class="stats">
+      <span>Time: <b id="time">120</b></span>
+      <span>Score: <b id="score">0</b></span>
+    </div>
+    <div class="problem" id="problem">Ready?</div>
+    <input id="answer" type="text" inputmode="numeric" autocomplete="off" placeholder="Answer" disabled>
+    <button id="start" class="start">Start (120s)</button>
+    <p class="hint">Answers submit automatically when correct. Use the calculator for scratch work.</p>
+  </section>
+
+  <main class="calc">
+    <div class="display" id="display">0</div>
+    <div class="keys">
+      <button data-a="clear" class="fn">AC</button>
+      <button data-a="back" class="fn">⌫</button>
+      <button data-v="%" class="op">%</button>
+      <button data-v="/" class="op">÷</button>
+      <button data-v="7">7</button><button data-v="8">8</button><button data-v="9">9</button>
+      <button data-v="*" class="op">×</button>
+      <button data-v="4">4</button><button data-v="5">5</button><button data-v="6">6</button>
+      <button data-v="-" class="op">−</button>
+      <button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button>
+      <button data-v="+" class="op">+</button>
+      <button data-v="0" class="zero">0</button>
+      <button data-v=".">.</button>
+      <button data-a="eq" class="eq">=</button>
+    </div>
+  </main>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
